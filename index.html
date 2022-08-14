@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
+    <title data-translate="title">Ultimate Meme Generator</title>
+</head>
+
+<body onload="onInit()" style="overflow-x: hidden;">
+
+    <nav class="flex space-bet align-center">
+        <img class="logo" onclick="location.reload()" src="imgs/LOGO.png">
+        <select name="lang" autocomplete="off" onchange="onSetLang(this.value)">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+        </select>
+        <ul>
+            <li class="close-nav" onclick="openGallery(),closeNav()">X</li>
+            <li data-translate="nav-gallery" onclick="openGallery(),closeNav()">Gallery</li>
+            <li data-translate="nav-memes" onclick="openGallery(),closeNav()">Memes</li>
+            <li data-translate="nav-about" onclick="openGallery(),closeNav()">About</li>
+        </ul>
+        <div class="hamburger" onclick="openNav()">☰</div>
+    </nav>
+
+    <section class="search-container align-center flex">
+        <input type="search" name="input-search" data-translate="search-ph" placeholder="Type To Search" autocomplete="off" oninput="onFilterImgs(this.value)">
+        <div class="search-tags flex space-bet">
+            <p onclick="onFilterImgs(this.innerText)">Usa</p>
+            <p onclick="onFilterImgs(this.innerText)">Baby</p>
+            <p onclick="onFilterImgs(this.innerText)">cat</p>
+            <p onclick="onFilterImgs(this.innerText)">movies</p>
+            <p onclick="onFilterImgs(this.innerText)">no way</p>
+        </div>
+    </section>
+
+    <div class="image-gallery"></div>
+    </section>
+
+    <section class="meme-editor">
+        <canvas width="500" height="500" style="border: 10px ridge #FF7F00;"></canvas>
+        <div class="control-box flex flex-col align-center">
+            <div class="box box-line flex flex-col align-center">
+                <input type="text" name="input" autocomplete="off" oninput="onSetLineTxt(this.value)">
+                <div class="editor-btns flex">
+                    <img class="editor-btn" onclick="onAddLine()" src="assets/add.png">
+                    <img class="editor-btn" onclick="onChangeLine()"
+                        src="assets/up-and-down-opposite-double-arrows-side-by-side.png">
+                    <img class="editor-btn" onclick="onDeleteLine()" src="assets/trash.png">
+                </div>
+            </div>
+            <div class="box box-font">
+                <img class="editor-btn" onclick="onIncreaseFont()" src="assets/increase font - icon.png">
+                <img class="editor-btn" onclick="onDecreaseFont()" src="assets/decrease font - icon.png">
+                <img class="editor-btn" onclick="onSetAlign('right')" src="assets/align-to-left.png">
+                <img class="editor-btn" onclick="onSetAlign('center')" src="assets/center-text-alignment.png">
+                <img class="editor-btn" onclick="onSetAlign('left')" src="assets/align-to-right.png">
+                <select name="font" onchange="onFontChange(this.value)">
+                    <option value="Impact">Impact</option>
+                    <option value="Ariel">Ariel</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+                <input type="color" autocomplete="off" name="stroke-color" onchange="onStrokeColor(this.value)">
+                <input type="color" autocomplete="off" name="fill-color" onchange="onFillColor(this.value)">
+            </div>
+            <div class="box box-addons flex flex-col">
+                <div class="box-stickers flex align-center">
+                    <button onclick="onAddLine(this.textContent,{x: 100,y: 200},50)">😀</button>
+                    <button onclick="onAddLine(this.textContent,{x: 200,y: 200},50)">😂</button>
+                    <button onclick="onAddLine(this.textContent,{x: 300,y: 200},50)">😁</button>
+                </div>
+                <div class="box-export flex align-center">
+                    <a href="#" onclick="downloadCanvas(this)"><button data-translate="btn-download">Download</button></a>
+                    <button data-translate="btn-share" class="btn-share">Share</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="flex justify-center align-center">
+        <small>Sprint 2 Meme Generator Project By Niv &copy;</small>
+    </footer>
+
+
+
+
+
+    <script src="./js/services/i18nService.js"></script>
+    <script src="./js/services/galleryService.js"></script>
+    <script src="./js/services/memeService.js"></script>
+    <script src="./js/galleryController.js"></script>
+    <script src="./js/memeController.js"></script>
+</body>
+
+</html>
