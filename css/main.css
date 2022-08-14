@@ -129,7 +129,7 @@ footer{
     background-color: var(--lightwhite);
     border: 10px ridge var(--orange);
     flex-basis: 500px;
-    height: 500px;
+    height: 520px;
 }
 .box{
     width: 90%;
@@ -166,8 +166,8 @@ footer{
     opacity: 0.5;
 }
 .editor-btn{
-    width: 40px;
-    padding: 7px;
+    width: 60px;
+    padding: 12px;
     background-color: var(--white);
 }
 .box-font{
@@ -282,5 +282,16 @@ input[id="fill-color"]{
     }
     .image-gallery > *{
         width: 100%;
+    }
+    .editor-btn{
+        width: 50px;
+        padding: 7px;
+    }
+    .box-stickers button{
+        font-size: 40px;
+    }
+    .box-export button{
+        width: 80px;
+        height: 30px;
     }
 }
