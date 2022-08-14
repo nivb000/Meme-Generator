@@ -20,10 +20,10 @@
             </select>
         </div>
         <ul>
-            <li class="close-nav" onclick="openGallery(),closeNav()">X</li>
-            <li data-translate="nav-gallery" onclick="openGallery(),closeNav()">Gallery</li>
+            <li class="close-nav" onclick="closeNav()">X</li>
+            <li data-translate="nav-gallery" onclick="location.reload(),closeNav()">Gallery</li>
             <li data-translate="nav-memes" onclick="renderMemes(),closeNav()">My Memes</li>
-            <li data-translate="nav-about" onclick="openGallery(),closeNav()">About</li>
+            <li data-translate="nav-about" onclick="location.reload(),closeNav()">About</li>
         </ul>
         <div class="hamburger" onclick="openNav()">☰</div>
     </nav>
@@ -83,7 +83,7 @@
                 <div class="box-export flex align-center">
                     <a href="#" onclick="downloadCanvas(this)"><button
                             data-translate="btn-download">Download</button></a>
-                    <button data-translate="btn-share" class="btn-share">Share</button>
+                    <button data-translate="btn-share" onclick="share(this)" class="btn-share">Share</button>
                     <button data-translate="btn-save" class="btn-save" onclick="onSaveMeme()">Save</button>
                 </div>
             </div>

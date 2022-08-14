@@ -175,9 +175,8 @@ function drawText(txt, x, y, fontSize, fillColor, strokeColor) {
     gCtx.closePath()
 }
 
-const shareButton = document.querySelector('.share-btn');
 
-shareButton.addEventListener("click", async () => {
+async function share(shareButton) {
     const data = gCanvas.toDataURL('image/jpeg')
     const file = new File([data], "my-canvas.jpg", { type: "image/jpeg" });
     try {
@@ -188,4 +187,4 @@ shareButton.addEventListener("click", async () => {
     } catch (err) {
         console.error("Share failed:", err.message);
     }
-});
+}
