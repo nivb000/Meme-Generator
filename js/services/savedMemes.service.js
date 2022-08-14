@@ -1,17 +1,24 @@
 
-
 var gMemes = loadFromStorage('memesDB') || []
+// var gMemes = [
+//     {id: 1,imgSrc: ,canvasSettings: ,previewImg: }
+// ]
 
 function getMemesToDisplay() {
     return gMemes
 }
 
 
-function saveMeme(data) {
-    gMemes.push(data)
+function createSavedMeme(previewImg, meme) {
+    gMemes.push({
+        id: meme.selectedImgId,
+        previewImg,
+        selectedImgId: meme.selectedImgId,
+        selectedLineIdx: meme.selectedLineIdx,
+        lines: meme.lines,
+    })
     saveToStorage('memesDB', gMemes)
 }
-
 
 
 

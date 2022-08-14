@@ -68,3 +68,9 @@ function moveLine(dx, dy) {
     gMeme.lines[gMeme.selectedLineIdx].pos.x += dx
     gMeme.lines[gMeme.selectedLineIdx].pos.y += dy
 }
+
+function setgMeme(meme){
+    gMeme.selectedImgId = meme.selectedImgId,
+    gMeme.selectedLineIdx = meme.selectedLineIdx,
+    gMeme.lines = meme.lines
+}

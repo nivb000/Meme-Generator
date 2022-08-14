@@ -101,10 +101,10 @@ function downloadCanvas(elLink) {
     elLink.href = data
     elLink.download = 'my-canvas.jpg'
 }
-
 function onSaveMeme() {
-    const data = gCanvas.toDataURL()
-    saveMeme(data)
+    const previewImg = gCanvas.toDataURL()
+    const meme = gMeme
+    createSavedMeme(previewImg,meme)
 }
 
 function addEventsListeners() {

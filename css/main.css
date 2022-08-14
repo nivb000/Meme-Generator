@@ -86,15 +86,6 @@ input[name="input-search"]{
 input[name="input-search"]:focus{
     outline: none;
 }
-.search-container a:nth-child(2){
-    font-size: 25px;
-}
-.search-container a:nth-child(3){
-    font-size: 20px;
-}
-.search-container a:nth-child(4){
-    font-size: 30px;
-}
 .search-container a{
     cursor: pointer;
 }
@@ -113,8 +104,8 @@ input[name="input-search"]:focus{
 }
 .image-gallery > * {
     width: 300px;
-    border-radius: 15px;
     cursor: pointer;
+    border-radius: 15px;
     box-shadow: 2px 2px 5px;
 }
 

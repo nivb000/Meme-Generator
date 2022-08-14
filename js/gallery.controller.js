@@ -2,12 +2,14 @@
 let elGallery
 let elMemeEditor
 let elSearch
+let elSearchBar
 
 
 function onInit() {
     elMemeEditor = document.querySelector(".meme-editor")
     elSearch = document.querySelector(".search-container")
     elGallery = document.querySelector(".image-gallery")
+    elSearchBar = document.querySelector('input[name="input-search"]')
     renderGallery()
 }
 
@@ -25,10 +27,17 @@ function renderGallery() {
     elGallery.innerHTML = strHTML.join('')
 }
 
-
-function onFilterImgs(value){
+function onSearchBar(value) {
+    elSearchBar.value = value
     setFilterImgs(value)
     renderGallery()
+}
+
+function onFilterImgs(anchor){
+    onSearchBar(anchor.innerText)
+    let fontSize = +anchor.style.fontSize.substr(0,2)
+    fontSize += 3
+    anchor.style.fontSize = `${fontSize}px`
 }
 
 function onGetMeme(id) {
@@ -62,10 +71,10 @@ function onSetLang(value) {
     setLang(value)
     if(value === 'he') {
         document.body.classList.add('rtl')
-        document.querySelector('input[name="input-search"]').style.backgroundPosition = 'left'
+        elSearchBar.style.backgroundPosition = 'left'
     } else {
         document.body.classList.remove('rtl')
-        document.querySelector('input[name="input-search"]').style.backgroundPosition = 'right'
+        elSearchBar.style.backgroundPosition = 'right'
 
     } 
     renderTranslate()

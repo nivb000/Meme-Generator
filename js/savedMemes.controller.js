@@ -2,15 +2,18 @@
 
 
 function renderMemes() {
+    openGallery()
     const memes = getMemesToDisplay()
-    console.log(memes);
-
     var strHTML = memes.map(meme => `
-        <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUA
-            AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
-            9TXL0Y4OHwAAAABJRU5ErkJggg=="/> 
+    <img src="${meme.previewImg}" onclick="renderSavedMeme(${meme.id})"/>
     `)
+    document.querySelector(".image-gallery").innerHTML = strHTML.join('')
+}
 
-    // console.log(strHTML);
-    // document.querySelector(".image-gallery").innerHTML = strHTML.join('')
+function renderSavedMeme(id) {
+    const meme = gMemes.find(meme => meme.id = id)
+    setgMeme(meme)
+    initCanvas()
+    openMemeEditor()
+    renderMeme()
 }

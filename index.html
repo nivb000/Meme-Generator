@@ -22,7 +22,7 @@
         <ul>
             <li class="close-nav" onclick="openGallery(),closeNav()">X</li>
             <li data-translate="nav-gallery" onclick="openGallery(),closeNav()">Gallery</li>
-            <li data-translate="nav-memes" onclick="openGallery(),closeNav()">Memes</li>
+            <li data-translate="nav-memes" onclick="renderMemes(),closeNav()">My Memes</li>
             <li data-translate="nav-about" onclick="openGallery(),closeNav()">About</li>
         </ul>
         <div class="hamburger" onclick="openNav()">☰</div>
@@ -30,13 +30,13 @@
 
     <section class="search-container align-center flex">
         <input type="search" name="input-search" data-translate="search-ph" placeholder="Type To Search"
-            autocomplete="off" oninput="onFilterImgs(this.value)">
+            autocomplete="off" oninput="onSearchBar(this.value)">
         <div class="search-tags flex space-bet">
-            <a onclick="onFilterImgs(this.innerText)">Usa</a>
-            <a onclick="onFilterImgs(this.innerText)">Baby</a>
-            <a onclick="onFilterImgs(this.innerText)">cat</a>
-            <a onclick="onFilterImgs(this.innerText)">movies</a>
-            <a onclick="onFilterImgs(this.innerText)">no way</a>
+            <a onclick="onFilterImgs(this)" style="font-size: 16px;">Usa</a>
+            <a onclick="onFilterImgs(this)" style="font-size: 37px;">Baby</a>
+            <a onclick="onFilterImgs(this)" style="font-size: 30px;">cat</a>
+            <a onclick="onFilterImgs(this)" style="font-size: 35px;">movies</a>
+            <a onclick="onFilterImgs(this)" style="font-size: 16px;">no way</a>
         </div>
     </section>
 
@@ -78,6 +78,7 @@
                     <button onclick="onAddLine(this.textContent,{x: 100,y: 200},50)">😀</button>
                     <button onclick="onAddLine(this.textContent,{x: 200,y: 200},50)">😂</button>
                     <button onclick="onAddLine(this.textContent,{x: 300,y: 200},50)">😁</button>
+                    <button onclick="onAddLine(this.textContent,{x: 300,y: 200},50)">🤣</button>
                 </div>
                 <div class="box-export flex align-center">
                     <a href="#" onclick="downloadCanvas(this)"><button
@@ -101,8 +102,8 @@
 
     <script src="./js/services/i18n.service.js"></script>
     <script src="./js/services/gallery.service.js"></script>
-    <script src="./js/services/meme.service.js"></script>
     <script src="./js/services/savedMemes.service.js"></script>
+    <script src="./js/services/meme.service.js"></script>
     <script src="./js/gallery.controller.js"></script>
     <script src="./js/meme.controller.js"></script>
     <script src="./js/savedMemes.controller.js"></script>
