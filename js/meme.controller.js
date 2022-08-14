@@ -42,7 +42,7 @@ function resizeCanvas() {
 function inputPlaceHolder() {
     const line = gMeme.lines[gMeme.selectedLineIdx]
     const input = document.querySelector('input[name=input]')
-    if(line){
+    if (line) {
         input.value = ''
         input.placeholder = line.txt
     }
@@ -104,7 +104,7 @@ function downloadCanvas(elLink) {
 function onSaveMeme() {
     const previewImg = gCanvas.toDataURL()
     const meme = gMeme
-    createSavedMeme(previewImg,meme)
+    createSavedMeme(previewImg, meme)
 }
 
 function addEventsListeners() {

@@ -18,11 +18,11 @@ function renderGallery() {
 
     const imgs = getImgsToShow()
 
-    var strHTML = imgs.map((img) => 
-    `
+    var strHTML = imgs.map((img) =>
+        `
     <img src="imgs/${img.id}.jpg" onclick="onGetMeme(${img.id})">
     `
-    ) 
+    )
 
     elGallery.innerHTML = strHTML.join('')
 }
@@ -33,9 +33,9 @@ function onSearchBar(value) {
     renderGallery()
 }
 
-function onFilterImgs(anchor){
+function onFilterImgs(anchor) {
     onSearchBar(anchor.innerText)
-    let fontSize = +anchor.style.fontSize.substr(0,2)
+    let fontSize = +anchor.style.fontSize.substr(0, 2)
     fontSize += 3
     anchor.style.fontSize = `${fontSize}px`
 }
@@ -69,14 +69,14 @@ function openGallery() {
 
 function onSetLang(value) {
     setLang(value)
-    if(value === 'he') {
+    if (value === 'he') {
         document.body.classList.add('rtl')
         elSearchBar.style.backgroundPosition = 'left'
     } else {
         document.body.classList.remove('rtl')
         elSearchBar.style.backgroundPosition = 'right'
 
-    } 
+    }
     renderTranslate()
     renderGallery()
 }

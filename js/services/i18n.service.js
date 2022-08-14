@@ -1,35 +1,35 @@
 var gCurrLang = 'en'
 
 var gTranslator = {
-    title:{
+    title: {
         en: 'Ultimate Meme Generator',
-        he:'עורך הממים'
+        he: 'עורך הממים'
     },
-    'nav-gallery':{
+    'nav-gallery': {
         en: 'Gallery',
         he: 'גלריה'
     },
-    'nav-memes':{
+    'nav-memes': {
         en: 'Memes',
         he: 'ממים'
     },
-    'nav-about':{
+    'nav-about': {
         en: 'About',
         he: 'אודות'
     },
-    'search-ph':{
+    'search-ph': {
         en: 'Type To Search',
         he: 'הקלד כדי לחפש'
     },
-    'btn-download':{
+    'btn-download': {
         en: 'Download',
         he: 'הורד'
     },
-    'btn-share':{
+    'btn-share': {
         en: 'Share',
         he: 'שתף'
     },
-    'btn-save':{
+    'btn-save': {
         en: 'Save',
         he: 'שמור'
     }
@@ -47,8 +47,8 @@ function getTranslate(transKey) {
 function renderTranslate() {
 
     const words = document.querySelectorAll('[data-translate]')
-    
-    words.forEach(word=>{
+
+    words.forEach(word => {
         const translateKey = word.dataset.translate
         const translateValue = getTranslate(translateKey)
         word.innerText = translateValue

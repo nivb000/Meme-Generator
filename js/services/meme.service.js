@@ -20,7 +20,7 @@ function getMeme(id) {
 }
 function setLineTxt(value) {
     const line = gMeme.lines[gMeme.selectedLineIdx]
-    if(line){
+    if (line) {
         gMeme.lines[gMeme.selectedLineIdx].txt = value
     }
 }
@@ -69,7 +69,7 @@ function moveLine(dx, dy) {
     gMeme.lines[gMeme.selectedLineIdx].pos.y += dy
 }
 
-function setgMeme(meme){
+function setgMeme(meme) {
     gMeme.selectedImgId = meme.selectedImgId,
     gMeme.selectedLineIdx = meme.selectedLineIdx,
     gMeme.lines = meme.lines

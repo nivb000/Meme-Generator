@@ -1,6 +1,4 @@
 
-
-
 function renderMemes() {
     openGallery()
     const memes = getMemesToDisplay()

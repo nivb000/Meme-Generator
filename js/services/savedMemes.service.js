@@ -1,8 +1,4 @@
-
 var gMemes = loadFromStorage('memesDB') || []
-// var gMemes = [
-//     {id: 1,imgSrc: ,canvasSettings: ,previewImg: }
-// ]
 
 function getMemesToDisplay() {
     return gMemes
