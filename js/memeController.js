@@ -49,7 +49,7 @@ function onDeleteLine() {
     renderMeme()
 }
 
-function onAddLine(txt = "NEW LINE", pos = { x: 200, y: 365 }, size = 30) {
+function onAddLine(txt = "NEW LINE", pos = { x: 250, y: 365 }, size = 30) {
     setNewLine(txt, pos, size)
     onChangeLine()
 }

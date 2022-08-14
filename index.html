@@ -27,7 +27,8 @@
     </nav>
 
     <section class="search-container align-center flex">
-        <input type="search" name="input-search" data-translate="search-ph" placeholder="Type To Search" autocomplete="off" oninput="onFilterImgs(this.value)">
+        <input type="search" name="input-search" data-translate="search-ph" placeholder="Type To Search"
+            autocomplete="off" oninput="onFilterImgs(this.value)">
         <div class="search-tags flex space-bet">
             <p onclick="onFilterImgs(this.innerText)">Usa</p>
             <p onclick="onFilterImgs(this.innerText)">Baby</p>
@@ -63,8 +64,12 @@
                     <option value="Ariel">Ariel</option>
                     <option value="Verdana">Verdana</option>
                 </select>
-                <input type="color" autocomplete="off" name="stroke-color" onchange="onStrokeColor(this.value)">
-                <input type="color" autocomplete="off" name="fill-color" onchange="onFillColor(this.value)">
+                <label for="stroke-color"><img class="editor-btn" src="assets/text stroke.png">
+                    <input type="color" autocomplete="off" id="stroke-color" onchange="onStrokeColor(this.value)">
+                </label>
+                <label for="fill-color"><img class="editor-btn" src="assets/paint-board-and-brush.png">
+                    <input type="color" autocomplete="off" id="fill-color" onchange="onFillColor(this.value)">
+                </label>
             </div>
             <div class="box box-addons flex flex-col">
                 <div class="box-stickers flex align-center">
@@ -73,7 +78,8 @@
                     <button onclick="onAddLine(this.textContent,{x: 300,y: 200},50)">😁</button>
                 </div>
                 <div class="box-export flex align-center">
-                    <a href="#" onclick="downloadCanvas(this)"><button data-translate="btn-download">Download</button></a>
+                    <a href="#" onclick="downloadCanvas(this)"><button
+                            data-translate="btn-download">Download</button></a>
                     <button data-translate="btn-share" class="btn-share">Share</button>
                 </div>
             </div>

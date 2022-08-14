@@ -187,7 +187,11 @@ select{
     background-color: var(--orange);
     color: var(--white);
 }
-input[name="fill-color"]{
+input[id="stroke-color"]{
+    display: none;
+}
+input[id="fill-color"]{
+    display: none;
     grid-column: 4 / 6;
 }
 .box-stickers{
@@ -198,7 +202,7 @@ input[name="fill-color"]{
 .box-stickers button{
     background: transparent;
     border: 0;
-    font-size: 40px;
+    font-size: 50px;
 }
 .box-export{
     height: 40%;

@@ -10,7 +10,7 @@ var gMeme = {
             strokeColor: 'black',
             color: 'white',
             isDrag: false,
-            pos: {x: 200, y: 35}
+            pos: {x: 250, y: 35}
         }
     ]
 }
