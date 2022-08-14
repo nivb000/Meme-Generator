@@ -39,6 +39,15 @@ function resizeCanvas() {
 
 }
 
+function inputPlaceHolder() {
+    const line = gMeme.lines[gMeme.selectedLineIdx]
+    const input = document.querySelector('input[name=input]')
+    if(line){
+        input.value = ''
+        input.placeholder = line.txt
+    }
+}
+
 function onSetLineTxt(value) {
     setLineTxt(value)
     renderMeme()
@@ -46,16 +55,18 @@ function onSetLineTxt(value) {
 
 function onDeleteLine() {
     deleteLine()
+    onChangeLine()
     renderMeme()
 }
 
-function onAddLine(txt = "NEW LINE", pos = { x: 250, y: 365 }, size = 30) {
+function onAddLine(txt = "NEW LINE", pos = { x: 250, y: 450 }, size = 38) {
     setNewLine(txt, pos, size)
     onChangeLine()
 }
 function onChangeLine() {
     changeSelectedLine()
-    document.querySelector("input[name='input']").value = gMeme.lines[gMeme.selectedLineIdx].txt
+    inputPlaceHolder()
+    document.querySelector("input[name='input']").value = ''
     renderMeme()
 }
 
@@ -89,6 +100,11 @@ function downloadCanvas(elLink) {
     const data = gCanvas.toDataURL()
     elLink.href = data
     elLink.download = 'my-canvas.jpg'
+}
+
+function onSaveMeme() {
+    const data = gCanvas.toDataURL()
+    saveMeme(data)
 }
 
 function addEventsListeners() {

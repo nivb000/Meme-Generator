@@ -28,6 +28,10 @@ var gTranslator = {
     'btn-share':{
         en: 'Share',
         he: 'שתף'
+    },
+    'btn-save':{
+        en: 'Save',
+        he: 'שמור'
     }
 }
 

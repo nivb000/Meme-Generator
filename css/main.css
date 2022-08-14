@@ -39,9 +39,14 @@
 nav{
     background-color: var(--orange);
 }
+.header-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-inline-start: 25px;
+}
 .logo{
     height: 30px;
-    margin-inline-start: 25px;
     cursor: pointer;
 }
 nav ul{
@@ -81,16 +86,16 @@ input[name="input-search"]{
 input[name="input-search"]:focus{
     outline: none;
 }
-.search-container p:nth-child(2){
+.search-container a:nth-child(2){
     font-size: 25px;
 }
-.search-container p:nth-child(3){
+.search-container a:nth-child(3){
     font-size: 20px;
 }
-.search-container p:nth-child(4){
+.search-container a:nth-child(4){
     font-size: 30px;
 }
-.search-container p{
+.search-container a{
     cursor: pointer;
 }
 .search-tags{
@@ -110,6 +115,7 @@ input[name="input-search"]:focus{
     width: 300px;
     border-radius: 15px;
     cursor: pointer;
+    box-shadow: 2px 2px 5px;
 }
 
 footer{

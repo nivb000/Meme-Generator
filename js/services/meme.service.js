@@ -5,24 +5,26 @@ var gMeme = {
     lines: [
         {
             txt: '',
-            size: 30,
+            size: 38,
             align: 'center',
             strokeColor: 'black',
             color: 'white',
             isDrag: false,
-            pos: {x: 250, y: 35}
+            pos: { x: 250, y: 35 }
         }
     ]
 }
-
 function getMeme(id) {
     gMeme.selectedImgId = id
     return gMeme
 }
 function setLineTxt(value) {
-    gMeme.lines[gMeme.selectedLineIdx].txt = value
+    const line = gMeme.lines[gMeme.selectedLineIdx]
+    if(line){
+        gMeme.lines[gMeme.selectedLineIdx].txt = value
+    }
 }
-function setNewLine(txt,pos,size) {
+function setNewLine(txt, pos, size) {
     gMeme.lines.push({
         txt,
         size,
@@ -34,10 +36,8 @@ function setNewLine(txt,pos,size) {
     })
 }
 function deleteLine() {
-    var deletedIdx = gMeme.lines.findIndex((line,idx) => idx === gMeme.selectedLineIdx)
-    gMeme.lines.splice(deletedIdx,1)
-    gMeme.selectedLineIdx--
-    return gMeme.lines
+    const deletedIdx = gMeme.selectedLineIdx
+    gMeme.lines.splice(gMeme.selectedLineIdx, 1)
 }
 
 function setStrokeColor(value) {
@@ -51,7 +51,7 @@ function setAlign(value) {
 }
 function changeSelectedLine() {
     gMeme.selectedLineIdx++
-    if(gMeme.selectedLineIdx > gMeme.lines.length - 1) gMeme.selectedLineIdx = 0
+    if (gMeme.selectedLineIdx > gMeme.lines.length - 1) gMeme.selectedLineIdx = 0
 }
 function icreaseFont() {
     gMeme.lines[gMeme.selectedLineIdx].size += 5

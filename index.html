@@ -12,11 +12,13 @@
 <body onload="onInit()" style="overflow-x: hidden;">
 
     <nav class="flex space-bet align-center">
-        <img class="logo" onclick="location.reload()" src="imgs/LOGO.png">
-        <select name="lang" autocomplete="off" onchange="onSetLang(this.value)">
-            <option value="en">English</option>
-            <option value="he">עברית</option>
-        </select>
+        <div class="header-left">
+            <img class="logo" onclick="location.reload()" src="imgs/LOGO.png">
+            <select name="lang" autocomplete="off" onchange="onSetLang(this.value)">
+                <option value="en">English</option>
+                <option value="he">עברית</option>
+            </select>
+        </div>
         <ul>
             <li class="close-nav" onclick="openGallery(),closeNav()">X</li>
             <li data-translate="nav-gallery" onclick="openGallery(),closeNav()">Gallery</li>
@@ -30,11 +32,11 @@
         <input type="search" name="input-search" data-translate="search-ph" placeholder="Type To Search"
             autocomplete="off" oninput="onFilterImgs(this.value)">
         <div class="search-tags flex space-bet">
-            <p onclick="onFilterImgs(this.innerText)">Usa</p>
-            <p onclick="onFilterImgs(this.innerText)">Baby</p>
-            <p onclick="onFilterImgs(this.innerText)">cat</p>
-            <p onclick="onFilterImgs(this.innerText)">movies</p>
-            <p onclick="onFilterImgs(this.innerText)">no way</p>
+            <a onclick="onFilterImgs(this.innerText)">Usa</a>
+            <a onclick="onFilterImgs(this.innerText)">Baby</a>
+            <a onclick="onFilterImgs(this.innerText)">cat</a>
+            <a onclick="onFilterImgs(this.innerText)">movies</a>
+            <a onclick="onFilterImgs(this.innerText)">no way</a>
         </div>
     </section>
 
@@ -81,6 +83,7 @@
                     <a href="#" onclick="downloadCanvas(this)"><button
                             data-translate="btn-download">Download</button></a>
                     <button data-translate="btn-share" class="btn-share">Share</button>
+                    <button data-translate="btn-save" class="btn-save" onclick="onSaveMeme()">Save</button>
                 </div>
             </div>
         </div>
@@ -96,11 +99,13 @@
 
 
 
-    <script src="./js/services/i18nService.js"></script>
-    <script src="./js/services/galleryService.js"></script>
-    <script src="./js/services/memeService.js"></script>
-    <script src="./js/galleryController.js"></script>
-    <script src="./js/memeController.js"></script>
+    <script src="./js/services/i18n.service.js"></script>
+    <script src="./js/services/gallery.service.js"></script>
+    <script src="./js/services/meme.service.js"></script>
+    <script src="./js/services/savedMemes.service.js"></script>
+    <script src="./js/gallery.controller.js"></script>
+    <script src="./js/meme.controller.js"></script>
+    <script src="./js/savedMemes.controller.js"></script>
 </body>
 
 </html>
