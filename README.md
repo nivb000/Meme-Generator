@@ -4,12 +4,12 @@
 
 <h4>App is live <a href="https://nivb000.github.io/Meme-Generator/">here</a></h4>
 
-<li>Build with HTML, HTML CANVAS, CSS and vanilla javascript. without any Framework</li>
+<li>Build with HTML, HTML CANVAS, CSS and vanilla javascript. without any framework</li>
 <li>i18n multi languages website</li>
 <li>Draggable text on canvas</li>
-<li>option to search or filter the memes by category</li>
-<li>option to download the meme or share with Web share API</li>
-<li>option to save the meme and edit later</li>
+<li>Feature to search or filter the memes by category</li>
+<li>Feature to download the meme or share with Web share API</li>
+<li>Feature to save the meme on local storage and edit later</li>
 
 <hr>
 
