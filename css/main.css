@@ -43,7 +43,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-inline-start: 25px;
+    margin-inline-start: 1rem;
 }
 .logo{
     height: 30px;
@@ -56,7 +56,7 @@ nav ul{
     height: 100px;
 }
 nav ul > *{
-    margin-inline-end: 25px;
+    margin-inline-end: 1rem;
     cursor: pointer;
     color: var(--white);
     font-family: Verdana;
