@@ -99,7 +99,7 @@ function onSetAlign(value) {
 function downloadCanvas(elLink) {
     const data = gCanvas.toDataURL()
     elLink.href = data
-    elLink.download = 'my-canvas.jpg'
+    elLink.download = 'my-meme.jpg'
 }
 function onSaveMeme() {
     const previewImg = gCanvas.toDataURL()
